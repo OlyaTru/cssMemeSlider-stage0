@@ -1,0 +1,126 @@
+.container-body {
+    width: 50vw;
+    height: 90vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-slider {
+    width: 100%;
+    height: 85%;
+    border: medium solid black;
+    display: flex;
+    border-radius: 1em;
+    background-color: rgb(35, 35, 35);
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 0;
+}
+
+.container-slides {
+    width: 90%;
+    height: 75%;
+    margin: auto;
+    margin-top: 0.1rem;
+    margin-bottom: 0;
+    border: thin solid rgb(35, 35, 35);
+    border-radius: 3%;
+    overflow: hidden;
+}
+
+.container-slides-line {
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+    width: 500%;
+}
+
+.slide {
+    display: flex;
+    overflow: hidden;
+    width: 20%;
+    object-fit: cover;
+    transition: all .7s ease;
+}
+
+.slide img {
+    width: 100%;
+    object-fit: cover;
+    transition: all .7s ease;
+}
+
+.container-text-and-button {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.slider-buttons {
+    display: flex;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.slider-text {
+    width: 70%;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.slider-buttons div {
+    display: flex;
+    padding-left: 0.4rem;
+}
+
+input[name="slide"] {
+    display: none;
+}
+
+label {
+    border: medium solid white;
+    border-radius: 50%;
+    height: 0.5rem;
+    width: 0.5rem;
+    cursor: pointer;
+}
+
+label:hover {
+    background-color:grey;
+}
+
+p {
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+#s1:checked ~ .move {
+    margin-left: 0;
+}
+
+#s2:checked ~ .move {
+    margin-left: -20%;
+}
+
+#s3:checked ~ .move {
+    margin-left: -40%;
+}
+
+#s4:checked ~ .move {
+    margin-left: -60%;
+}
+
+#s5:checked ~ .move {
+    margin-left: -80%;
+}
