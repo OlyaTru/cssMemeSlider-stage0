@@ -61,7 +61,6 @@
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: space-between;
-    align-items: baseline;
 }
 
 .slider-buttons {
@@ -74,11 +73,28 @@
     width: 70%;
     margin: 0;
     margin-top: 1rem;
+    display: flex;
+    overflow: hidden;
 }
 
-.slider-buttons div {
+.slider-text > p {
     display: flex;
-    padding-left: 0.4rem;
+    overflow: hidden;
+    min-width: 100%;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    transition: all .5s ease;
+}
+
+.container-for-label {
+    display: flex;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding-left: 0.2rem;
+    cursor: pointer;
 }
 
 input[name="slide"] {
@@ -86,24 +102,65 @@ input[name="slide"] {
 }
 
 label {
-    border: medium solid white;
+    display: flex;
+    border: thin solid rgba(255, 255, 255, 0);
     border-radius: 50%;
-    height: 0.5rem;
-    width: 0.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
     cursor: pointer;
 }
 
-label:hover {
-    background-color:grey;
+.big-circle {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: rgb(94, 129, 211);
+    cursor: pointer;
+    margin-top: 0.2rem;
+    margin-left: auto;
 }
 
-p {
-    color: white;
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-    line-height: 1rem;
+.container-for-label:hover .big-circle {
+    background-color: white;
 }
+
+.small-circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.15rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: rgb(35, 35, 35);
+    display: none;
+}
+
+.container-slider:has(input[id="s1"]:checked) label[for="s1"] .small-circle {
+    display: block;
+}
+
+.container-slider:has(input[id="s2"]:checked) label[for="s2"] .small-circle {
+    display: block;
+}
+
+.container-slider:has(input[id="s3"]:checked) label[for="s3"] .small-circle {
+    display: block;
+}
+
+.container-slider:has(input[id="s4"]:checked) label[for="s4"] .small-circle {
+    display: block;
+}
+
+.container-slider:has(input[id="s5"]:checked) label[for="s5"] .small-circle {
+    display: block;
+}
+
+
+
 
 #s1:checked ~ .move {
     margin-left: 0;
@@ -123,4 +180,20 @@ p {
 
 #s5:checked ~ .move {
     margin-left: -80%;
+}
+
+.container-slider:has(input[id="s2"]:checked) .slider-text > p {
+    transform: translateX(-100%);
+}
+
+.container-slider:has(input[id="s3"]:checked) .slider-text > p {
+    transform: translateX(-200%);
+}
+
+.container-slider:has(input[id="s4"]:checked) .slider-text > p {
+    transform: translateX(-300%);
+}
+
+.container-slider:has(input[id="s5"]:checked) .slider-text > p {
+    transform: translateX(-400%);
 }
