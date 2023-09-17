@@ -1,0 +1,226 @@
+.container-body {
+    width: 50vw;
+    height: 90vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-slider {
+    width: 100%;
+    height: 85%;
+    border: medium solid black;
+    display: flex;
+    border-radius: 1em;
+    background-color: rgb(35, 35, 35);
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 9%;
+}
+
+.container-slides {
+    width: 90%;
+    height: 75%;
+    margin: auto;
+    margin-top: 0.1rem;
+    margin-bottom: 0;
+    border: thin solid rgb(35, 35, 35);
+    border-radius: 3%;
+    overflow: hidden;
+}
+
+.container-slides-line {
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+    width: 500%;
+}
+
+.slide {
+    display: flex;
+    overflow: hidden;
+    width: 20%;
+    object-fit: cover;
+    transition: all .7s ease;
+}
+
+.slide img {
+    width: 100%;
+    object-fit: cover;
+    transition: all .7s ease;
+}
+
+.container-text-and-button {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+}
+
+.slider-buttons {
+    display: flex;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.slider-text {
+    width: 70%;
+    margin: 0;
+    margin-top: 1rem;
+    display: flex;
+    overflow: hidden;
+}
+
+.slider-text > p {
+    display: flex;
+    overflow: hidden;
+    min-width: 100%;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    transition: all .5s ease;
+}
+
+.container-for-label {
+    display: flex;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding-left: 0.2rem;
+    cursor: pointer;
+}
+
+input[name="slide"] {
+    display: none;
+}
+
+label {
+    display: flex;
+    border: thin solid rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+.big-circle {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: rgb(94, 129, 211);
+    cursor: pointer;
+    margin-top: 0.2rem;
+    margin-left: auto;
+}
+
+.container-for-label:hover .big-circle {
+    background-color: white;
+}
+
+.small-circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.15rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: rgb(35, 35, 35);
+    display: none;
+}
+
+.container-slider:has(input[id="s1"]:checked) label[for="s1"] .small-circle {
+    display: block;
+}
+
+.container-slider:has(input[id="s2"]:checked) label[for="s2"] .small-circle {
+    display: block;
+}
+
+.container-slider:has(input[id="s3"]:checked) label[for="s3"] .small-circle {
+    display: block;
+}
+
+.container-slider:has(input[id="s4"]:checked) label[for="s4"] .small-circle {
+    display: block;
+}
+
+.container-slider:has(input[id="s5"]:checked) label[for="s5"] .small-circle {
+    display: block;
+}
+
+#s1:checked ~ .move {
+    margin-left: 0;
+}
+
+#s2:checked ~ .move {
+    margin-left: -20%;
+}
+
+#s3:checked ~ .move {
+    margin-left: -40%;
+}
+
+#s4:checked ~ .move {
+    margin-left: -60%;
+}
+
+#s5:checked ~ .move {
+    margin-left: -80%;
+}
+
+.container-slider:has(input[id="s2"]:checked) .slider-text > p {
+    transform: translateX(-100%);
+}
+
+.container-slider:has(input[id="s3"]:checked) .slider-text > p {
+    transform: translateX(-200%);
+}
+
+.container-slider:has(input[id="s4"]:checked) .slider-text > p {
+    transform: translateX(-300%);
+}
+
+.container-slider:has(input[id="s5"]:checked) .slider-text > p {
+    transform: translateX(-400%);
+}
+
+
+@media (max-width: 1007px) {
+.slider-buttons {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider-text {
+    width: 100%;
+}
+
+.container-slides {
+    height: 65%;
+}
+}
+
+@media (max-width: 840px) {
+    .container-slides {
+        height: 50%;
+    }
+}
+
+@media (max-width: 640px) {
+    .container-slides {
+        height: 40%;
+    }
+}
