@@ -197,3 +197,31 @@ label {
 .container-slider:has(input[id="s5"]:checked) .slider-text > p {
     transform: translateX(-400%);
 }
+
+
+@media (max-width: 1007px) {
+.slider-buttons {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider-text {
+    width: 100%;
+}
+
+.container-slides {
+    height: 65%;
+}
+}
+
+@media (max-width: 840px) {
+    .container-slides {
+        height: 50%;
+    }
+}
+
+@media (max-width: 640px) {
+    .container-slides {
+        height: 40%;
+    }
+}
